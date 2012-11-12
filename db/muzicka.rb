@@ -88,11 +88,11 @@ module Refinery
         },
         :recordings_2011 => {
           :title => { :sk => 'Pomo auťa, bo anťa ňeto kja! (2011)', :en => 'Pomo auťa, bo anťa ňeto kja! (2011)', :pl => 'Pomo auťa, bo anťa ňeto kja! (2011)'},
-          :attributes => {:deletable => false, :show_in_menu => true, :parent_id => 10}
+          :attributes => {:deletable => false, :show_in_menu => true, :parent_id => 9}
         },
         :recordings_2012 => {
           :title => { :sk => 'Speváci z Rejdovej a Muzička (2012)', :en => 'Singers from Rejdová village and Muzička (2012)', :pl => 'Singers from Rejdová village and Muzička (2012)'},
-          :attributes => {:deletable => false, :show_in_menu => true, :parent_id => 10}
+          :attributes => {:deletable => false, :show_in_menu => true, :parent_id => 9}
         },
         :blog => {
           :id => 4,
