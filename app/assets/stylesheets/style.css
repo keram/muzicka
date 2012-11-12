@@ -1,0 +1,44 @@
+body {
+  background: rgba(111, 124, 69, 0.61);
+  font-family: Verdana, 'Geneva CE', lucida, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-align:center;
+  background-image:url('/assets/design/slniecko_sep.png');
+  background-size: 80px;
+  background-repeat:repeat;
+  background-position:center center;
+  background-clip:content-box;
+  -webkit-background-clip:content-box;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#page {
+  position:relative;
+}
+
+#body_content, #side_body_content, #blog_home {
+  background: #fff;
+  color: #333;
+  padding: 20px;
+  margin: 5px 0px;
+  border-radius: .4em;
+  background-image:url('/assets/design/slniecko_opac.png');
+  background-size: 80px;
+  background-repeat:repeat;
+}
+
+#page_container {
+  display: inline-block;
+  width:800px;
+  text-align:left;
+}
