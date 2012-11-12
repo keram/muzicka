@@ -7,12 +7,4 @@
 } %>
 <% end %>
 
-<% content_for :body do %>
-	<% @page.images.each_with_index do |image, index| %>
-		<img src="<%= image.url%>" width="760"/>
-	<% end unless @page.images.nil? %>
-
-   <%=raw @page.content_for(:body) %>
-<% end %>
-
 <%= render '/refinery/content_page', :hide_sections => [:body_content_title] %>
