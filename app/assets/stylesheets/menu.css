@@ -1,94 +1,78 @@
-#header {
-  border: 1px solid #CCC;
-  background: #EEE;
-  border-radius: .4em;
-  padding: 10px;
-  height: 30px;
-  margin: 5px 0px;
-  opacity:0.9;
-  filter:alpha(opacity=90); /* For IE8 and earlier */
-  }
-
 /*MENU*/
 #menu {
-  float:left;
-  display:inline-block;
-  }
+  float: left;
+}
 
 #menu ul {
   list-style: none;
   padding: 0px;
-  margin:0px;
-  display: inline-block;
-}
- 
-#menu ul li {
-  float: left;
-  margin-right: 10px;
-}
- 
-#menu ul li a {
-  display: inline-block;
-  padding: 5px 10px;
-  text-decoration: none;
-}
- 
-#menu ul li.selected a, #menu ul li a:hover {
-  font-weight:bold;
-}
-
-/*LANG_MENU*/
-#lang_menu {
-  float:right;
-  display:inline-block;
-  }
- 
-#lang_menu a {
-  display: inline-block;
-  padding: 5px 5px;
-  text-decoration: none;
   margin: 0px;
 }
 
-#lang_menu a:hover {
-  font-weight:bold;
-}
-
-
-/*SUBMENU*/
-#submenu {
-  border: 1px solid #CCC;
-  background: #EEE;
-  border-radius: .4em;
-  padding: 10px;
-  opacity:0.9;
-  filter:alpha(opacity=90); /* For IE8 and earlier */
-  POSITION: absolute; 
-  WIDTH: 150px; 
-  HEIGHT: 500px; 
-  left: -200px; 
-  TOP: 0px;
-  }
-
-#submenu ul {
-  list-style: none;
-  padding: 0px;
-  margin:0px;
-  display: inline-block;
-}
- 
-#submenu ul li {
+#menu li, #lang_menu a {
   float: left;
-  margin-right: 10px;
 }
- 
-#submenu ul li a {
+
+#menu a {
   display: inline-block;
-  padding: 5px 10px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  border-bottom: solid 3px #eee;
+}
+
+#menu ul li.selected a,
+#menu ul li a:hover {
+  background: #fff;
+  color: #000;
+}
+
+#menu ul li.selected a {
+  border-bottom-color: #A6AE8D;
+}
+
+#lang_menu {
+  float: right;
+}
+
+#lang_menu a {
+  display: inline-block;
+  padding: 15px 20px;
+  padding-left: 0px;
   text-decoration: none;
 }
- 
-#submenu ul li.selected a, #submenu ul li a:hover {
-  font-weight:bold;
+
+#submenu {
+    background: none repeat scroll 0 0 #eee;
+    border-radius: 0.4em;
+    height: 500px;
+    left: -200px;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    padding: 25px 0px;
+    width: 180px;
 }
 
+#submenu ul,
+#submenu li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+#submenu a {
+  display: block;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-bottom: solid 3px #eee;
+}
+
+#submenu ul li.selected a, #submenu ul li a:hover {
+    background: #fff;
+
+}
+
+#submenu ul li.selected a {
+  border-bottom-color: #A6AE8D;
+}

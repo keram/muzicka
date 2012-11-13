@@ -26,13 +26,20 @@ h2 {
   position:relative;
 }
 
+#header {
+  background: #eee;
+  border-radius: 5px;
+  opacity:0.9;
+  filter:alpha(opacity=90);
+  margin-bottom: 8px;
+}
+
 #body_content, #side_body_content, #blog_home {
   background: #fff;
   color: #333;
   padding: 20px;
-  margin: 5px 0px;
   border-radius: .4em;
-  background-image:url('/assets/design/slniecko_opac.png');
+  background-image: url('/assets/design/slniecko_opac.png');
   background-size: 80px;
   background-repeat:repeat;
 }
@@ -42,3 +49,8 @@ h2 {
   width:800px;
   text-align:left;
 }
+
+
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; visibility: hidden;   }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }

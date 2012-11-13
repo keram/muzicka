@@ -1,15 +1,13 @@
 <%= render '/refinery/content_page', :hide_sections => [:body_content_title] %>
-<% if Refinery::I18n.current_frontend_locale == :sk  %>
-	<% @blog_posts.each do |blog_post| %>
-		<div id="blog_home">
-			<h2>
-			<%= link_to blog_post_url(blog_post) do -%>
-			  <%= truncate blog_post.title,
-			    :length => 75,
-			    :preserve_html_tags => false %>
-			<% end %>
-			</h2>
-			<%= blog_post.custom_teaser.html_safe %>
-		</div>
+<% @blog_posts.each do |blog_post| %>
+<div id="blog_home">
+	<h2>
+	<%= link_to blog_post_url(blog_post) do -%>
+	  <%= truncate blog_post.title,
+	    :length => 75,
+	    :preserve_html_tags => false %>
 	<% end %>
+	</h2>
+	<%= blog_post.custom_teaser.html_safe unless blog_post.custom_teaser.nil? %>
+</div>
 <% end %>
