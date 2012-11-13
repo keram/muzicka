@@ -75,4 +75,5 @@
 
 #submenu ul li.selected a {
   border-bottom-color: #A6AE8D;
+  color: #000;
 }
