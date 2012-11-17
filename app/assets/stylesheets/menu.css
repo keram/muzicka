@@ -68,12 +68,12 @@
   border-bottom: solid 3px #eee;
 }
 
-#submenu ul li.selected a, #submenu ul li a:hover {
+#submenu .selected a,
+#submenu a:hover {
     background: #fff;
-
 }
 
-#submenu ul li.selected a {
+#submenu .selected a {
   border-bottom-color: #A6AE8D;
   color: #000;
 }
