@@ -1,4 +1,9 @@
 /*MENU*/
+
+#header a {
+  color: #876632
+}
+
 #menu {
   float: left;
 }
@@ -13,31 +18,47 @@
   float: left;
 }
 
-#menu a {
+#menu a:link {
   display: inline-block;
   padding: 15px 20px;
-  border-radius: 5px;
   text-decoration: none;
-  border-bottom: solid 3px #eee;
+  background: #eee;
+  font-size: 1.17em;
+  opacity: 0.9;
+  font-family: 'Cinzel Decorative', cursive, sans-serif;
 }
 
-#menu ul li.selected a,
-#menu ul li a:hover {
+#menu .first a {
+  border-radius: 5px 0px 0px 5px;
+}
+
+#menu .selected a {
   background: #fff;
   color: #000;
+  font-weight: bold;
 }
 
-#menu ul li.selected a {
-  border-bottom-color: #A6AE8D;
+#menu .selected a {
+}
+
+#menu a:hover {
+  background: #fff;
+}
+
+#menu a:active {
+  border-bottom: none;
+  position: relative;
+  top: 1px;
 }
 
 #lang_menu {
   float: right;
+  margin-right: 10px;
 }
 
 #lang_menu a {
   display: inline-block;
-  padding: 15px 20px;
+  padding: 15px 10px;
   padding-left: 0px;
   text-decoration: none;
 }
@@ -65,7 +86,6 @@
   display: block;
   text-decoration: none;
   padding: 10px 20px;
-  border-bottom: solid 3px #eee;
 }
 
 #submenu .selected a,
@@ -74,6 +94,5 @@
 }
 
 #submenu .selected a {
-  border-bottom-color: #A6AE8D;
-  color: #000;
+   color: #000;
 }

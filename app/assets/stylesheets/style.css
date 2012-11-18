@@ -1,8 +1,8 @@
 @font-face {
-  font-family: 'Cardo';
+  font-family: 'Cinzel Decorative';
   font-style: normal;
   font-weight: 400;
-  src: local('Cardo'), local('Cardo-Regular'), url(https://themes.googleusercontent.com/static/fonts/cardo/v5/zpisC4kGu76S5N9VhpMnEg.woff) format('woff');
+  src: local('CinzelDecorative-Regular'), url(https://themes.googleusercontent.com/static/fonts/cinzeldecorative/v1/fmgK7oaJJIXAkhd9798yQt0Zu-Kfjb9GTaHd117aS3o.woff) format('woff');
 }
 
 /*
@@ -106,7 +106,7 @@ body {
    ========================================================================== */
 
 a {
-    color: #00e;
+    color: #876632;
 }
 
 a:visited {
@@ -130,6 +130,10 @@ a:active {
     outline: 0;
 }
 
+a:active {
+  text-decoration: none;
+  color: red;
+}
 
 /* =============================================================================
    Typography
@@ -418,8 +422,8 @@ textarea {
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    width: 98%;
-    height: 7.25em;
+    width: 97%;
+    height: 8.25em;
     padding: 5px;
     font-size: 16px;
     background: #fafafa;
@@ -540,13 +544,17 @@ body {
   -webkit-background-clip:content-box;
 }
 
+h1, h2, h3, h4 {
+  font-family: 'Cinzel Decorative', cursive, sans-serif;
+}
+
 h1 {
-  font-size: 18px;
+  font-size: 26px;
   font-weight: bold;
 }
 
 h2 {
-  font-size: 15px;
+  font-size: 22px;
   font-weight: bold;
 }
 
@@ -557,8 +565,6 @@ h2 {
 #header {
   background: #eee;
   border-radius: 5px;
-  opacity:0.9;
-  filter:alpha(opacity=90);
   margin-bottom: 8px;
 }
 
@@ -574,11 +580,16 @@ h2 {
 
 #page_container {
   margin: 10px auto;
-  width: 800px;
+  width: 820px;
   text-align: left;
   padding: 0px 10px;
 }
 
+#uvod-page #body,
+#o-muzicke-page #body {
+  padding-top: 300px;
+  background:  url('/assets/content/muzicka_home.jpg') no-repeat;
+}
 
 .clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; visibility: hidden;   }
 .clearfix:after { clear: both; }
