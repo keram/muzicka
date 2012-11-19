@@ -536,8 +536,8 @@ body {
   font-size: 13px;
   line-height: 18px;
   text-align:center;
-  background-image:url('/assets/design/slniecko_sep.png');
-  background-size: 80px;
+  background-image:url('/assets/design/muzicka_background.png');
+  background-size: 150px;
   background-repeat:repeat;
   background-position:center center;
   background-clip:content-box;
@@ -573,8 +573,8 @@ h2 {
   color: #333;
   padding: 20px;
   border-radius: .4em;
-  background-image: url('/assets/design/slniecko_opac.png');
-  background-size: 80px;
+  background-image: url('/assets/design/muzicka_background_content.png');
+  background-size: 150px;
   background-repeat:repeat;
 }
 
