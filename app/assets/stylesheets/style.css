@@ -556,6 +556,12 @@ h1 {
 h2 {
   font-size: 22px;
   font-weight: bold;
+  background: url(/assets/design/muzicka_pasik.png) repeat-x right top;
+  background-size: 20%;
+  background-origin: padding-box;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin: 0px;
 }
 
 #page {
