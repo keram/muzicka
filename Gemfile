@@ -8,7 +8,9 @@ gem 'rails', '~> 3.2.8'
 
 gem 'rack-ssl', :require => 'rack/ssl'
 gem 'rack-rewrite'
-gem 'pg'
+gem 'mysql'
+gem 'capistrano'
+gem 'capistrano-notifier'
 
 group :development, :test do
   gem 'sqlite3'
