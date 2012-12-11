@@ -11,6 +11,7 @@ gem 'rack-rewrite'
 gem 'mysql'
 gem 'capistrano'
 gem 'capistrano-notifier'
+gem 'capistrano-rbenv'
 
 group :development, :test do
   gem 'sqlite3'
