@@ -1,18 +1,4 @@
 GIT
-  remote: git://github.com/refinery/refinerycms-blog.git
-  revision: 745eae1249f2a6e79db985abcf307f75c0f4ef94
-  branch: master
-  specs:
-    refinerycms-blog (2.1.0.dev)
-      acts-as-taggable-on
-      filters_spam (~> 0.2)
-      friendly_id (~> 4.0.4)
-      rails_autolink (~> 1.0.7)
-      refinerycms-core (~> 2.1.0.dev)
-      refinerycms-settings (~> 2.1.0.dev)
-      seo_meta (~> 1.4.0)
-
-GIT
   remote: git://github.com/refinery/refinerycms-i18n.git
   revision: adbef8ae30e122e4f2dad16e558a9bb144d176b6
   branch: master
@@ -42,11 +28,11 @@ GIT
 
 GIT
   remote: git://github.com/refinery/refinerycms.git
-  revision: f2e27dbbe996e203bc1dedc621b72b6db9aae78b
+  revision: f9f1a7526348683503ce65a1976b7908eb887ca6
   branch: master
   specs:
     refinerycms (2.1.0.dev)
-      bundler (~> 1.0)
+      bundler (>= 1.2.2, < 2.0)
       refinerycms-authentication (= 2.1.0.dev)
       refinerycms-core (= 2.1.0.dev)
       refinerycms-dashboard (= 2.1.0.dev)
@@ -91,6 +77,18 @@ GIT
       factory_girl_rails (~> 1.7.0)
       refinerycms-core (= 2.1.0.dev)
       rspec-rails (~> 2.11)
+
+PATH
+  remote: vendor/refinerycms-blog
+  specs:
+    refinerycms-blog (2.1.0.dev)
+      acts-as-taggable-on
+      filters_spam (~> 0.2)
+      friendly_id (~> 4.0.4)
+      rails_autolink (~> 1.0.7)
+      refinerycms-core (~> 2.1.0.dev)
+      refinerycms-settings (~> 2.1.0.dev)
+      seo_meta (~> 1.4.0)
 
 GEM
   remote: https://rubygems.org/
@@ -284,7 +282,7 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
-    rake (10.0.2)
+    rake (10.0.3)
     rdoc (3.12)
       json (~> 1.4)
     ref (1.0.2)
@@ -294,7 +292,7 @@ GEM
       rspec-core (~> 2.12.0)
       rspec-expectations (~> 2.12.0)
       rspec-mocks (~> 2.12.0)
-    rspec-core (2.12.1)
+    rspec-core (2.12.2)
     rspec-expectations (2.12.0)
       diff-lcs (~> 1.1.3)
     rspec-mocks (2.12.0)

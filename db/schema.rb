@@ -11,13 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121106000058) do
+ActiveRecord::Schema.define(:version => 20121214154554) do
 
   create_table "refinery_blog_categories", :force => true do |t|
     t.string   "title"
+    t.string   "slug"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.string   "slug"
   end
 
   add_index "refinery_blog_categories", ["id"], :name => "index_refinery_blog_categories_on_id"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(:version => 20121106000058) do
     t.datetime "updated_at",   :null => false
   end
 
+  add_index "refinery_blog_comments", ["blog_post_id"], :name => "index_refinery_blog_comments_on_blog_post_id"
   add_index "refinery_blog_comments", ["id"], :name => "index_refinery_blog_comments_on_id"
 
   create_table "refinery_blog_post_translations", :force => true do |t|
@@ -75,15 +76,15 @@ ActiveRecord::Schema.define(:version => 20121106000058) do
     t.text     "body"
     t.boolean  "draft"
     t.datetime "published_at"
-    t.datetime "created_at",                      :null => false
-    t.datetime "updated_at",                      :null => false
     t.integer  "user_id"
+    t.string   "slug"
     t.string   "custom_url"
     t.text     "custom_teaser"
     t.string   "source_url"
     t.string   "source_url_title"
     t.integer  "access_count",     :default => 0
-    t.string   "slug"
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
   end
 
   add_index "refinery_blog_posts", ["access_count"], :name => "index_refinery_blog_posts_on_access_count"
