@@ -9,9 +9,6 @@ gem 'rails', '~> 3.2.8'
 gem 'rack-ssl', :require => 'rack/ssl'
 gem 'rack-rewrite'
 gem 'mysql'
-gem 'capistrano'
-gem 'capistrano-notifier'
-gem 'capistrano-rbenv'
 
 group :development, :test do
   gem 'sqlite3'
@@ -57,13 +54,13 @@ gem 'jquery-rails'
 
 # Refinery CMS
 # gem 'refinerycms', '~> 2.0.3' #, :path => 'vendor/refinerycms', :branch => '2-0-stable'
-#gem 'refinerycms', :path => 'vendor/refinerycms', :branch => 'master'
-gem 'refinerycms', :git => 'git://github.com/refinery/refinerycms.git', :branch => 'master'
+gem 'refinerycms', :path => 'vendor/refinerycms', :branch => 'muzicka_menu'
+# gem 'refinerycms', :git => 'git://github.com/refinery/refinerycms.git', :branch => 'master'
 gem 'refinerycms-settings', :git => 'git://github.com/refinery/refinerycms-settings.git', :branch => 'master'
 
 # Specify additional Refinery CMS Extensions here (all optional):
 # gem 'refinerycms-i18n', '~> 2.0.0'
 gem 'refinerycms-i18n', :git => 'git://github.com/refinery/refinerycms-i18n.git', :branch => 'master'
-gem 'refinerycms-blog', :path => 'vendor/refinerycms-blog' # :.com/refinery/refinerycms-blog.git', :branch => 'master'
-#gem 'refinerycms-blog', :git => 'git://github.com/refinery/refinerycms-blog.git', :branch => 'master'
+# gem 'refinerycms-blog', :path => 'vendor/refinerycms-blog' # :.com/refinery/refinerycms-blog.git', :branch => 'master'
+gem 'refinerycms-blog', :git => 'git://github.com/refinery/refinerycms-blog.git', :branch => 'master'
 gem 'refinerycms-inquiries', :git => 'git://github.com/refinery/refinerycms-inquiries.git', :branch => 'master'

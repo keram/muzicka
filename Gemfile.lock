@@ -1,4 +1,18 @@
 GIT
+  remote: git://github.com/refinery/refinerycms-blog.git
+  revision: 745eae1249f2a6e79db985abcf307f75c0f4ef94
+  branch: master
+  specs:
+    refinerycms-blog (2.1.0.dev)
+      acts-as-taggable-on
+      filters_spam (~> 0.2)
+      friendly_id (~> 4.0.4)
+      rails_autolink (~> 1.0.7)
+      refinerycms-core (~> 2.1.0.dev)
+      refinerycms-settings (~> 2.1.0.dev)
+      seo_meta (~> 1.4.0)
+
+GIT
   remote: git://github.com/refinery/refinerycms-i18n.git
   revision: adbef8ae30e122e4f2dad16e558a9bb144d176b6
   branch: master
@@ -26,10 +40,8 @@ GIT
       acts_as_indexed (~> 0.7.7)
       refinerycms-core (~> 2.1.0.dev)
 
-GIT
-  remote: git://github.com/refinery/refinerycms.git
-  revision: f9f1a7526348683503ce65a1976b7908eb887ca6
-  branch: master
+PATH
+  remote: vendor/refinerycms
   specs:
     refinerycms (2.1.0.dev)
       bundler (>= 1.2.2, < 2.0)
@@ -78,18 +90,6 @@ GIT
       refinerycms-core (= 2.1.0.dev)
       rspec-rails (~> 2.11)
 
-PATH
-  remote: vendor/refinerycms-blog
-  specs:
-    refinerycms-blog (2.1.0.dev)
-      acts-as-taggable-on
-      filters_spam (~> 0.2)
-      friendly_id (~> 4.0.4)
-      rails_autolink (~> 1.0.7)
-      refinerycms-core (~> 2.1.0.dev)
-      refinerycms-settings (~> 2.1.0.dev)
-      seo_meta (~> 1.4.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -131,18 +131,6 @@ GEM
     bcrypt-ruby (3.0.1)
     bcrypt-ruby (3.0.1-x86-mingw32)
     builder (3.0.4)
-    capistrano (2.13.5)
-      highline
-      net-scp (>= 1.0.0)
-      net-sftp (>= 2.0.0)
-      net-ssh (>= 2.0.14)
-      net-ssh-gateway (>= 1.1.0)
-    capistrano-notifier (0.2.0)
-      actionmailer
-      activesupport
-      capistrano (>= 2)
-    capistrano-rbenv (0.0.7)
-      capistrano
     capybara (1.1.4)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -202,7 +190,6 @@ GEM
       childprocess (>= 0.2.3)
       guard (>= 1.1)
       spork (>= 0.8.4)
-    highline (1.6.15)
     hike (1.2.1)
     http_parser.rb (0.5.3)
     http_parser.rb (0.5.3-x86-mingw32)
@@ -226,13 +213,6 @@ GEM
     multi_json (1.5.0)
     mysql (2.9.0)
     mysql (2.9.0-x86-mingw32)
-    net-scp (1.0.4)
-      net-ssh (>= 1.99.1)
-    net-sftp (2.0.5)
-      net-ssh (>= 2.0.9)
-    net-ssh (2.6.2)
-    net-ssh-gateway (1.1.0)
-      net-ssh (>= 1.99.1)
     nokogiri (1.5.5)
     nokogiri (1.5.5-x86-mingw32)
     orm_adapter (0.4.0)
@@ -293,7 +273,7 @@ GEM
       rspec-expectations (~> 2.12.0)
       rspec-mocks (~> 2.12.0)
     rspec-core (2.12.2)
-    rspec-expectations (2.12.0)
+    rspec-expectations (2.12.1)
       diff-lcs (~> 1.1.3)
     rspec-mocks (2.12.0)
     rspec-rails (2.12.0)
@@ -353,9 +333,6 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  capistrano
-  capistrano-notifier
-  capistrano-rbenv
   coffee-rails (~> 3.2.1)
   guard-rspec
   guard-spork
