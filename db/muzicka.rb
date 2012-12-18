@@ -95,19 +95,19 @@ module Refinery
           :attributes => {:deletable => false, :show_in_menu => true, :parent_id => 9}
         },
         :blog => {
-          :id => 4,
+          :id => 7,
           :title => { :sk => 'Blog', :en => 'Blog', :pl => 'Blog'},
           :attributes => {:deletable => false, :show_in_menu => true},
           :menu_position => 50
         },
         :contact => {
-          :id => 5,
+          :id => 4,
           :title => { :sk => 'Kontakt', :en => 'Contact', :pl => 'Contact'},
           :attributes => {:deletable => false, :show_in_menu => true},
           :menu_position => 60
         },
         :contact_thank_you => {
-          :id => 6,
+          :id => 5,
           :title => { :sk => 'Ďakujeme', :en => 'Thank You', :pl => 'Thank You'},
           :attributes => {:deletable => false, :show_in_menu => false}
         }
