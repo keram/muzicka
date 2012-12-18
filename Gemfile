@@ -8,7 +8,7 @@ gem 'rails', '~> 3.2.8'
 
 gem 'rack-ssl', :require => 'rack/ssl'
 gem 'rack-rewrite'
-gem 'mysql'
+gem 'mysql2'
 
 group :development, :test do
   gem 'sqlite3'

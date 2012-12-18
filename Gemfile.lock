@@ -211,8 +211,8 @@ GEM
     method_source (0.8.1)
     mime-types (1.19)
     multi_json (1.5.0)
-    mysql (2.9.0)
-    mysql (2.9.0-x86-mingw32)
+    mysql2 (0.3.11)
+    mysql2 (0.3.11-x86-mingw32)
     nokogiri (1.5.5)
     nokogiri (1.5.5-x86-mingw32)
     orm_adapter (0.4.0)
@@ -337,7 +337,7 @@ DEPENDENCIES
   guard-rspec
   guard-spork
   jquery-rails
-  mysql
+  mysql2
   poltergeist
   rack-rewrite
   rack-ssl
