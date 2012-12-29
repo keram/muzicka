@@ -1,10 +1,12 @@
-<% if @page.id != @page.root.id %>
-<%= render :partial => '/refinery/sub_menu',
-             :locals => {
-               :dom_id => 'submenu',
-               :css => 'submenu',
-               :roots => refinery_menu_pages.select{|p| p.parent_id == @page.parent_id}
-} %>
-<% end %>
+<% content_for :body do %>
+<% if @page.images.any? %>
+  <div id="page-image">
+    <% @page.images.each do |image| %>
+        <%= image_tag image.thumbnail("710x200#c").url %>
+   <% end %>
+  </div>
+ <% end %>
 
-<%= render '/refinery/content_page', :hide_sections => [:body_content_title] %>
+  <%= raw @page.content_for(:body) %>
+<% end %>
+<%= render '/refinery/content_page' %>

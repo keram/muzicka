@@ -64,3 +64,5 @@ gem 'refinerycms-i18n', :git => 'git://github.com/refinery/refinerycms-i18n.git'
 # gem 'refinerycms-blog', :path => 'vendor/refinerycms-blog' # :.com/refinery/refinerycms-blog.git', :branch => 'master'
 gem 'refinerycms-blog', :git => 'git://github.com/refinery/refinerycms-blog.git', :branch => 'master'
 gem 'refinerycms-inquiries', :git => 'git://github.com/refinery/refinerycms-inquiries.git', :branch => 'master'
+
+gem 'refinerycms-page-images', :path => 'vendor/'

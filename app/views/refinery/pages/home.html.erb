@@ -1,13 +1,35 @@
-<%= render '/refinery/content_page', :hide_sections => [:body_content_title] %>
-<% @blog_posts.each do |blog_post| %>
-<div id="blog_home">
-	<h2>
-	<%= link_to blog_post_url(blog_post) do -%>
-	  <%= truncate blog_post.title,
-	    :length => 75,
-	    :preserve_html_tags => false %>
-	<% end %>
-	</h2>
-	<%= blog_post.custom_teaser.html_safe unless blog_post.custom_teaser.nil? %>
-</div>
+<% content_for :body_content_title, 'Muzička' %>
+
+<% content_for :body do %>
+  <% if @page.images.any? %>
+  <div id="page-image">
+    <% @page.images.each do |image| %>
+        <%= image_tag image.thumbnail("200x200#c").url %>
+   <% end %>
+  </div>
+  <% end %>
+
+  <div id="page-body">
+    <%= raw @page.content_for(:body) %>
+  </div>
+
+  <h2>Posledné články na blogu</h2>
+  <% if @blog_posts.any? %>
+  <div id="blog_home">
+    <% @blog_posts.each do |blog_post| %>
+
+      <h3>
+      <%= link_to blog_post_url(blog_post) do -%>
+        <%= truncate blog_post.title,
+          :length => 75,
+          :preserve_html_tags => false %>
+      <% end %>
+      </h3>
+      <%= blog_post.custom_teaser.html_safe unless blog_post.custom_teaser.nil? %>
+    <% end %>
+  </div>
+  <% end %>
+
 <% end %>
+
+<%= render '/refinery/content_page' %>

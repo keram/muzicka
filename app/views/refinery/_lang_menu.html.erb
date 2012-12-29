@@ -3,10 +3,7 @@
 	<% Refinery::I18n.config.frontend_locales.each do |locale| %>
 		<% if Refinery::I18n.current_frontend_locale != locale  %>
 			<%= link_to refinery.url_for(params.merge(locale: locale)), {:title => Refinery::I18n.locales[locale]} do%>
-
-			<span>
-				<%= image_tag("/assets/refinery/icons/flags/#{locale}.png") %>
-				<%= Refinery::I18n.locales[locale] %></span>
+				<%= image_tag("/assets/refinery/icons/flags/#{locale}.png", :title => Refinery::I18n.locales[locale]) %>
 		<% end %>
 	<% end -%>
 <% end -%>

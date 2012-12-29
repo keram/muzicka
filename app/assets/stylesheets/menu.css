@@ -1,7 +1,16 @@
 /*MENU*/
 
 #header a {
-  color: #876632
+  color: #876632;
+  height: 50px;
+  line-height: 50px;
+  background: #eee;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.17em;
+  opacity: 0.9;
+  padding: 0px 18px;
+  font-family: 'Cinzel Decorative', cursive, sans-serif;
 }
 
 #menu {
@@ -14,31 +23,23 @@
   margin: 0px;
 }
 
+#menu li {
+  position: relative;
+}
+
+#menu ul ul {
+  background: #eee;
+  overflow: hidden;
+}
+
 #menu li, #lang_menu a {
   float: left;
 }
 
-#menu a:link {
-  display: inline-block;
-  padding: 15px 20px;
-  text-decoration: none;
-  background: #eee;
-  font-size: 1.17em;
-  opacity: 0.9;
-  font-family: 'Cinzel Decorative', cursive, sans-serif;
-}
-
-#menu .first a {
-  border-radius: 5px 0px 0px 5px;
-}
-
-#menu .selected a {
+#menu .selected > a {
   background: #fff;
   color: #000;
   font-weight: bold;
-}
-
-#menu .selected a {
 }
 
 #menu a:hover {
@@ -46,9 +47,26 @@
 }
 
 #menu a:active {
-  border-bottom: none;
   position: relative;
   top: 1px;
+}
+
+#menu li {
+  margin: 0px;
+  padding: 0px;
+}
+
+#menu ul ul a {
+  opacity: 1;
+  width: 360px;
+  margin: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0px;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  text-overflow:ellipsis;
 }
 
 #lang_menu {
@@ -57,42 +75,6 @@
 }
 
 #lang_menu a {
-  display: inline-block;
-  padding: 15px 10px;
-  padding-left: 0px;
-  text-decoration: none;
-}
-
-#submenu {
-    background: none repeat scroll 0 0 #eee;
-    border-radius: 0.4em;
-    height: 500px;
-    left: -200px;
-    opacity: 0.9;
-    position: absolute;
-    top: 0;
-    padding: 25px 0px;
-    width: 180px;
-}
-
-#submenu ul,
-#submenu li {
-  list-style: none;
   padding: 0px;
-  margin: 0px;
-}
-
-#submenu a {
-  display: block;
-  text-decoration: none;
-  padding: 10px 20px;
-}
-
-#submenu .selected a,
-#submenu a:hover {
-    background: #fff;
-}
-
-#submenu .selected a {
-   color: #000;
+  padding-right: 10px;
 }

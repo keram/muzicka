@@ -546,6 +546,9 @@ body {
 
 h1, h2, h3, h4 {
   font-family: 'Cinzel Decorative', cursive, sans-serif;
+  margin-bottom: 1em;
+  line-height: 1.5em;
+  margin-top: 0px;
 }
 
 h1 {
@@ -560,12 +563,12 @@ h2 {
   background-size: 20%;
   background-origin: padding-box;
   padding-top: 30px;
-  padding-bottom: 20px;
   margin: 0px;
 }
 
-#page {
-  position:relative;
+#body, #page-body {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
 }
 
 #header {
@@ -574,31 +577,100 @@ h2 {
   margin-bottom: 8px;
 }
 
-#body_content, #side_body_content, #blog_home {
+#body_content, #side_body_content {
   background: #fff;
   color: #333;
   padding: 20px;
   border-radius: .4em;
-  background-image: url('/assets/design/muzicka_background_content.png');
-  background-size: 150px;
-  background-repeat:repeat;
 }
 
 #page_container {
   margin: 10px auto;
-  width: 820px;
   text-align: left;
   padding: 0px 10px;
 }
 
-#uvod-page #body,
-#o-muzicke-page #body {
-  padding-top: 300px;
-  background:  url('/assets/content/muzicka_home.jpg') no-repeat;
+
+#page nav,
+#rss_feed_subscribe {
+  margin-bottom: 2em;
 }
 
 .clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; visibility: hidden;   }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
 
+h1, h2, h3 {
+  margin-bottom: 1em;
+}
 
+
+#header #skip-to-content {
+  display: none;
+}
+
+@media (max-width: 640px) {
+
+#header #skip-to-content {
+  display: inline-block;
+  border-radius: 5px 0px 0px 0px;
+}
+
+#menu {
+  width: 100%;
+  overflow: hidden;
+}
+
+#menu li{
+  float: none;
+  width: 100%;
+}
+
+#menu li a {
+  width: 100%;
+}
+
+
+#menu ul ul {
+  display: block;
+  position: normal;
+  top: 0px;
+  overflow: hidden;
+}
+
+
+#menu ul ul a {
+  padding-left: 40px;
+  width: 600px;
+}
+
+}
+
+@media only screen and (min-width: 780px) {
+
+  #page_container {
+    width: 750px;
+  }
+
+  #menu ul ul .first a {
+    border-radius: 0px;
+  }
+
+  #menu .first a {
+    border-radius: 5px 0px 0px 5px;
+  }
+
+ #menu ul ul {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 50px;
+    left: 0px;
+  }
+
+  #menu li:hover ul {
+    display: block;
+  }
+
+
+}

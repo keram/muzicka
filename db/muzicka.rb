@@ -64,17 +64,17 @@ module Refinery
       pages = {
         :home => {
           :id => 1,
-          :title => { :sk => 'Úvod', :en => 'Home', :pl => 'Home'},
+          :title => { :sk => 'Úvod', :en => 'Home', :pl => 'Dom'},
           :menu_position => 1
         },
         :about_us => {
           :id => 3,
-          :title => { :sk => 'O Muzičke', :en => 'About Muzička', :pl => 'About Muzička'},
+          :title => { :sk => 'O Muzičke', :en => 'About Muzička', :pl => 'O Muzička'},
           :attributes => {:deletable => false, :show_in_menu => true},
           :menu_position => 20
         },
         :video => {
-          :title => { :sk => 'Video', :en => 'Video', :pl => 'Video'},
+          :title => { :sk => 'Video', :en => 'Video', :pl => 'Wideo'},
           :attributes => {
             :deletable => true,
             :show_in_menu => true,
@@ -82,7 +82,7 @@ module Refinery
           :menu_position => 30
         },
         :recordings => {
-          :title => { :sk => 'Nahrávky', :en => 'Recordings', :pl => 'Recordings'},
+          :title => { :sk => 'Nahrávky', :en => 'Recordings', :pl => 'Nagrania'},
           :attributes => {:deletable => false, :show_in_menu => true, :skip_to_first_child => true},
           :menu_position => 40
         },
@@ -102,13 +102,13 @@ module Refinery
         },
         :contact => {
           :id => 4,
-          :title => { :sk => 'Kontakt', :en => 'Contact', :pl => 'Contact'},
+          :title => { :sk => 'Kontakt', :en => 'Contact', :pl => 'Kontakt'},
           :attributes => {:deletable => false, :show_in_menu => true},
           :menu_position => 60
         },
         :contact_thank_you => {
           :id => 5,
-          :title => { :sk => 'Ďakujeme', :en => 'Thank You', :pl => 'Thank You'},
+          :title => { :sk => 'Ďakujeme', :en => 'Thank You', :pl => 'Dziękujemy'},
           :attributes => {:deletable => false, :show_in_menu => false}
         }
       }

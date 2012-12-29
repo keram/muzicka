@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121214154554) do
+ActiveRecord::Schema.define(:version => 20121229184457) do
 
   create_table "refinery_blog_categories", :force => true do |t|
     t.string   "title"
@@ -69,7 +69,7 @@ ActiveRecord::Schema.define(:version => 20121214154554) do
   end
 
   add_index "refinery_blog_post_translations", ["locale"], :name => "index_refinery_blog_post_translations_on_locale"
-  add_index "refinery_blog_post_translations", ["refinery_blog_post_id"], :name => "index_b64251f261a86197a796efc47e3e73a02cc69284"
+  add_index "refinery_blog_post_translations", ["refinery_blog_post_id"], :name => "index_refinery_blog_post_translations_on_refinery_blog_post_id"
 
   create_table "refinery_blog_posts", :force => true do |t|
     t.string   "title"
@@ -90,6 +90,28 @@ ActiveRecord::Schema.define(:version => 20121214154554) do
   add_index "refinery_blog_posts", ["access_count"], :name => "index_refinery_blog_posts_on_access_count"
   add_index "refinery_blog_posts", ["id"], :name => "index_refinery_blog_posts_on_id"
   add_index "refinery_blog_posts", ["slug"], :name => "index_refinery_blog_posts_on_slug"
+
+  create_table "refinery_image_page_translations", :force => true do |t|
+    t.integer  "refinery_image_page_id"
+    t.string   "locale"
+    t.text     "caption"
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
+  end
+
+  add_index "refinery_image_page_translations", ["locale"], :name => "index_refinery_image_page_translations_on_locale"
+  add_index "refinery_image_page_translations", ["refinery_image_page_id"], :name => "index_186c9a170a0ab319c675aa80880ce155d8f47244"
+
+  create_table "refinery_image_pages", :force => true do |t|
+    t.integer "image_id"
+    t.integer "page_id"
+    t.integer "position"
+    t.text    "caption"
+    t.string  "page_type", :default => "page"
+  end
+
+  add_index "refinery_image_pages", ["image_id"], :name => "index_refinery_image_pages_on_image_id"
+  add_index "refinery_image_pages", ["page_id"], :name => "index_refinery_image_pages_on_page_id"
 
   create_table "refinery_images", :force => true do |t|
     t.string   "image_mime_type"
@@ -123,7 +145,7 @@ ActiveRecord::Schema.define(:version => 20121214154554) do
   end
 
   add_index "refinery_page_part_translations", ["locale"], :name => "index_refinery_page_part_translations_on_locale"
-  add_index "refinery_page_part_translations", ["refinery_page_part_id"], :name => "index_f9716c4215584edbca2557e32706a5ae084a15ef"
+  add_index "refinery_page_part_translations", ["refinery_page_part_id"], :name => "index_refinery_page_part_translations_on_refinery_page_part_id"
 
   create_table "refinery_page_parts", :force => true do |t|
     t.integer  "refinery_page_id"
@@ -149,7 +171,7 @@ ActiveRecord::Schema.define(:version => 20121214154554) do
   end
 
   add_index "refinery_page_translations", ["locale"], :name => "index_refinery_page_translations_on_locale"
-  add_index "refinery_page_translations", ["refinery_page_id"], :name => "index_d079468f88bff1c6ea81573a0d019ba8bf5c2902"
+  add_index "refinery_page_translations", ["refinery_page_id"], :name => "index_refinery_page_translations_on_refinery_page_id"
 
   create_table "refinery_pages", :force => true do |t|
     t.integer  "parent_id"
