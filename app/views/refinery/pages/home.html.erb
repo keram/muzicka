@@ -2,11 +2,11 @@
 
 <% content_for :body do %>
   <% if @page.images.any? %>
-  <div id="page-image">
-    <% @page.images.each do |image| %>
-        <%= image_tag image.thumbnail("200x200#c").url %>
-   <% end %>
-  </div>
+    <div id="page-image">
+      <% @page.images.each do |image| %>
+          <%= image_tag image.thumbnail("710x200#c").url %>
+     <% end %>
+    </div>
   <% end %>
 
   <div id="page-body">

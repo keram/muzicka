@@ -1,3 +1,4 @@
+# encoding: utf-8
 Refinery::Resources.configure do |config|
   # Configures the maximum allowed upload size (in bytes) for a file upload
   # config.max_file_size = 52428800
@@ -19,8 +20,8 @@ Refinery::Resources.configure do |config|
   # Configure Dragonfly
   # This is where in the middleware stack to insert the Dragonfly middleware
   # config.dragonfly_insert_before = "ActionDispatch::Callbacks"
-  # config.dragonfly_secret = "4043203f90de19cd30e8ae3039e16215d4220aa375b930cf"
+  # config.dragonfly_secret = "069b7a7c01bdf9dc4a63f078d5c8101882979f1695d09245"
   # config.dragonfly_url_format = "/system/resources/:job/:basename.:format"
-  # config.datastore_root_path = "/home/web-data/work/limba/muzicka/public/system/refinery/resources"
+  # config.datastore_root_path = "/home/web-data/work/iness/cuttingdeficits/muzicka/public/system/refinery/resources"
 
 end

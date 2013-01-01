@@ -1,3 +1,4 @@
+# encoding: utf-8
 Refinery::Core.configure do |config|
   # When true will rescue all not found errors and display a friendly error page
   config.rescue_not_found = Rails.env.production?
@@ -14,7 +15,7 @@ Refinery::Core.configure do |config|
   # config.base_cache_key = :refinery
 
   # Site name
-  config.site_name = 'Muzicka'
+  config.site_name = "Muzička"
 
   # This activates Google Analytics tracking within your website. If this
   # config is left blank or set to UA-xxxxxx-x then no remote calls to
@@ -25,14 +26,14 @@ Refinery::Core.configure do |config|
   # config.authenticity_token_on_frontend = true
 
   # Hide/show child pages in menu
-  config.menu_hide_children = true
+  # config.menu_hide_children = false
 
   # CSS class selectors for menu helper
   # config.menu_css = {:selected=>"selected", :first=>"first", :last=>"last"}
 
   # Should set this if concerned about DOS attacks. See
   # http://markevans.github.com/dragonfly/file.Configuration.html#Configuration
-  # config.dragonfly_secret = "4043203f90de19cd30e8ae3039e16215d4220aa375b930cf"
+  # config.dragonfly_secret = "069b7a7c01bdf9dc4a63f078d5c8101882979f1695d09245"
 
   # Show/hide IE6 upgrade message in the backend
   # config.ie6_upgrade_message_enabled = true

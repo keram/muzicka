@@ -1,3 +1,4 @@
+# encoding: utf-8
 Refinery::Images.configure do |config|
   # Configures the maximum allowed upload size (in bytes) for an image
   # config.max_image_size = 5242880
@@ -35,10 +36,10 @@ Refinery::Images.configure do |config|
   # Configure Dragonfly
   # This is where in the middleware stack to insert the Dragonfly middleware
   # config.dragonfly_insert_before = "ActionDispatch::Callbacks"
-  # config.dragonfly_secret = "4043203f90de19cd30e8ae3039e16215d4220aa375b930cf"
+  # config.dragonfly_secret = "069b7a7c01bdf9dc4a63f078d5c8101882979f1695d09245"
   # If you decide to trust file extensions replace :ext below with :format
   # config.dragonfly_url_format = "/system/images/:job/:basename.:ext"
-  # config.datastore_root_path = "/home/web-data/work/limba/muzicka/public/system/refinery/images"
+  # config.datastore_root_path = "/home/web-data/work/iness/cuttingdeficits/muzicka/public/system/refinery/images"
   # config.trust_file_extensions = false
 
 end
