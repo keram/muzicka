@@ -422,7 +422,7 @@ textarea {
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    width: 97%;
+    width: 95%;
     height: 8.25em;
     padding: 5px;
     font-size: 16px;
@@ -468,7 +468,7 @@ textarea:focus {
 }
 
 input[required=required], textarea[required=required] {
-    border-bottom-color: #cc0000;
+    /* border-bottom-color: #cc0000;*/
     background: #fff url(/assets/design/red_star.png) no-repeat 98% 7%;
 }
 
@@ -593,20 +593,39 @@ h2 {
 
 #page nav,
 #rss_feed_subscribe {
-  margin-bottom: 2em;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
+
+#body .inner:before, #body .inner:after { content: "\0020"; display: block; height: 0; visibility: hidden;   }
+#body .inner:after { clear: both; }
+#body .inner { zoom: 1; }
 
 .clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; visibility: hidden;   }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
 
 h1, h2, h3 {
-  margin-bottom: 1em;
+  margin-bottom: 20px;
 }
-
 
 #header #skip-to-content {
   display: none;
+}
+
+#contact-block {
+  width: 35%;
+  float: left;
+}
+
+div.inquiries {
+  width: 60%;
+  float: right;
+}
+
+.perex {
+  font-size: 130%;
+  line-height: 160%;
 }
 
 @media (max-width: 640px) {
@@ -637,7 +656,6 @@ h1, h2, h3 {
   top: 0px;
   overflow: hidden;
 }
-
 
 #menu ul ul a {
   padding-left: 40px;

@@ -1,7 +1,7 @@
 <% content_for :body_content_title, 'Muzička' %>
 
 <% content_for :body do %>
-  <% if @page.images.any? %>
+  <% if @page.respond_to?('images') && @page.images.any? %>
     <div id="page-image">
       <% @page.images.each do |image| %>
           <%= image_tag image.thumbnail("710x200#c").url %>
@@ -13,9 +13,18 @@
     <%= raw @page.content_for(:body) %>
   </div>
 
-  <h2>Posledné články na blogu</h2>
+  <div id="mailinglist-subscription">
+    <% flash.each do |m, k| %>
+      <div class="flash <%= m %>" >
+        <%= k.html_safe %>
+      </div>
+    <% end %>
+      <%= render '/refinery/mailinglists/subscribers/form' %>
+  </div>
+
   <% if @blog_posts.any? %>
   <div id="blog_home">
+    <h2>Posledné články na blogu</h2>
     <% @blog_posts.each do |blog_post| %>
 
       <h3>

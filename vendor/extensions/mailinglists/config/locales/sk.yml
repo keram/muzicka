@@ -1,0 +1,83 @@
+sk:
+  refinery:
+    plugins:
+      mailinglists:
+        title: Mailinglists
+        description: Provides a contact form and stores mailinglists
+    mailinglists:
+      subscribers:
+        mailinglist_subscription_success: 'Prihlásenie do e-mailovej konferencie prebehlo úspešne.'
+        mailinglist_unsubscription_success: 'Odhlásenie z e-mailovej konferencie prebehlo úspešne.'
+        mailinglist_subscription_error: 'Prihlásenie do e-mailovej konferencie zlyhalo, prosím skuste to neskôr alebo nám o tom dajte vediet na muzicka@muzicka.sk.'
+        form:
+          title: 'E-mailová konferencia'
+          put_email: 'Zadajte e-mail'
+          sign_in: 'Prihlásiť'
+          info_privacy: 'E-mailová adresa bude uchovávaná len pre potreby konferencie a nebude poskytnutá tretím stranám.'
+          info_logout: 'Pre odhlásenie z e-mailovej konferencie zadajte znovu váš e-mail.'
+      admin:
+        subscribers:
+          delete: Remove this subscriber forever
+          subscriber:
+            delete: Delete
+            confirm_delete_subscriber: "Really you want delete this subscriber (this don't him unsubscribe, just remove from db) ?"
+            mark_as_spam: Mark as spam
+            mark_as_ham: Move to inbox
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Update who gets notified
+            edit_confirmation_email: Edit confirmation email
+          index:
+            no_subscribers: You have not received any mailinglists subsctiption yet.
+          spam:
+            no_spam: Hooray! You don't have any spam.
+          show:
+            details: Details
+            age: Age
+            actions: Actions
+            back_to_all_subscribers: Back to all subscribers
+            spam: Spam
+            spam_yes: 'yes'
+            subscriber: Subscriber
+            to: To
+            from: From
+            click_to_email: Click to email this address
+            phone: Phone
+            date: Date
+            message: Message
+        settings:
+          notification_recipients_form:
+            settings_value_name: Send notifications to
+            explanation: Every time someone make subscribtion on your website, Refinery sends out an email to say there is a new subscriber.
+            hint: When a new email is submitted, Refinery will send an email notification to you.
+            example: "Enter your email address(es) like: jack@work.com, jill@office.com"
+          confirmation_email_form:
+            to: To
+            from: From
+            subject: Subject
+            click_to_edit_subject: Click here to edit the subject
+            explanation: Every time someone contacts you on your website, Refinery sends out an email to confirm the mailinglist with the person who made it.
+            below_edit_email_sent: Below you can edit the email that is sent out.
+            the_customer_making_subscribtion: The customer making the subscribtion
+            message: Message
+            note: "Note: place the text %name% where you'd like the customer's name to appear in the email"
+      mailer:
+        notification:
+          greeting: Hi there
+          you_recieved_new_subscriber: You just received a new mailinglist subscription on your website.
+          subscriber_starts: --- subscriber starts ---
+          subscriber_ends: --- subscriber ends ---
+          from: From
+          email: Email
+          phone: Phone
+          message: Message
+          closing_line: Kind Regards
+          ps_html: P.S. All your subscribers are stored in the "Mailinglists" section of Refinery should you ever want to view it later there.
+  activerecord:
+    models:
+      subscriber: Subscriber
+    attributes:
+      subscriber:
+        email: Email
+        subscribed: Subscribed

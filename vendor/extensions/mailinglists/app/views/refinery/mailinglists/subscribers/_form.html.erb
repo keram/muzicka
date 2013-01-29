@@ -1,0 +1,15 @@
+<%= form_for [refinery, :mailinglists, @subscriber] do |f| %>
+  <% unless @subscriber.errors.blank? %>
+    <div class="form-error">
+      <% @subscriber.errors.each do |elm, msg| %>
+        <p><%= t(elm.to_s) %> <%= msg %></p>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email, t('.put_email'), :class => 'placeholder-fallback required' %>
+    <%= f.email_field :email, :placeholder => t('.put_email'), :required => 'required', :class => 'required email text' %>
+    <%= f.submit t('.sign_in') %>
+  </div>
+<% end %>

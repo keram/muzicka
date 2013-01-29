@@ -8,7 +8,7 @@ module Refinery
     def self.import_settings
 
       settings = {
-        :site_email => 'info@muzicka.sk',
+        :site_email => 'muzicka@muzicka.sk',
         :site_phone => '',
         :site_url => 'http://www.muzicka.sk',
         :site_twitter => 'muzicka',
@@ -88,10 +88,17 @@ module Refinery
         },
         :recordings_2011 => {
           :title => { :sk => 'Pomo auťa, bo anťa ňeto kja! (2011)', :en => 'Pomo auťa, bo anťa ňeto kja! (2011)', :pl => 'Pomo auťa, bo anťa ňeto kja! (2011)'},
+          #:custom_slug => { :sk =>  'pomo-auta-bo-anta-neto-kja-2011'},
           :attributes => {:deletable => false, :show_in_menu => true, :parent_id => 9}
         },
         :recordings_2012 => {
           :title => { :sk => 'Speváci z Rejdovej a Muzička (2012)', :en => 'Singers from Rejdová village and Muzička (2012)', :pl => 'Singers from Rejdová village and Muzička (2012)'},
+          #:custom_slug => { :sk =>  'spevaci-z-rejdovej-a-muzicka-2012'},
+          :attributes => {:deletable => false, :show_in_menu => true, :parent_id => 9}
+        },
+        :recordings_2012_2 => {
+          :title => { :sk => 'CD [Muzička] 2', :en => 'CD [Muzička] 2', :pl => 'CD [Muzička] 2'},
+          #:custom_slug => { :sk =>  'cd-muzicka-2'},
           :attributes => {:deletable => false, :show_in_menu => true, :parent_id => 9}
         },
         :blog => {
@@ -156,6 +163,13 @@ module Refinery
           attributes = attributes.merge({:title => p[:title][lang].to_s})
           page.update_attributes(attributes)
         end if I18n.frontend_locales.any?
+
+        I18n.frontend_locales.each do |locale|
+          ::I18n.locale = locale
+          Globalize.with_locale(locale) do
+            page.save
+          end
+        end
 
         puts "Page \"#{page.title}\" (#{page.id}) #{page_created ? 'created' : 'updated'}."
       end
