@@ -636,6 +636,18 @@ div.inquiries {
   max-width: 60%;
 }
 
+.flash {
+  padding: 10px;
+  background: #A3A6CF;
+  margin-bottom: 10px;
+}
+
+.flash.success {
+  background: #C6EB7B;
+}
+
+
+
 @media (max-width: 640px) {
 
 #header #skip-to-content {

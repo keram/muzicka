@@ -41,7 +41,7 @@ module Refinery
           logger.warn "There was an error with email (#{params[:subscriber][:email]}). \n#{$!.message}\n"
           flash[:error] = "Houston we have a problem. If problem persist please contact us on email: #{Refinery::Setting.get(:site_email)} ."
         ensure
-          render :json => flash
+          redirect_to '/#mailinglist-subscription'
       end
 
       protected
