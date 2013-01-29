@@ -64,5 +64,9 @@ module Muzicka
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+      config.action_view.sanitized_allowed_tags = %w( iframe )
+      config.action_view.sanitized_allowed_attributes = %w( src width height frameborder scrolling)
+
   end
 end

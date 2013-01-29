@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def get_last_3_blog_posts
-    @blog_posts = ::Refinery::Blog::Post.live.limit(3)
+    @blog_posts = ::Refinery::Blog::Post.with_globalize.live.limit(3)
   end
 
   def initialize_mailinglist

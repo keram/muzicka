@@ -23,8 +23,9 @@
   </div>
 
   <% if @blog_posts.any? %>
+  <h2><%= t('latest_posts_on_blog', :scope => 'refinery') %></h2>
   <div id="blog_home">
-    <h2>Posledné články na blogu</h2>
+
     <% @blog_posts.each do |blog_post| %>
 
       <h3>

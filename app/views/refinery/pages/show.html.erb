@@ -1,5 +1,5 @@
 <% content_for :body do %>
-<% if @page.images.any? %>
+<% if @page.respond_to?('images') && @page.images.any? %>
   <div id="page-image">
     <% @page.images.each do |image| %>
         <%= image_tag image.thumbnail("710x200#c").url %>
