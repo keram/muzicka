@@ -628,6 +628,14 @@ div.inquiries {
   line-height: 160%;
 }
 
+#mailinglist-subscription {
+  margin-bottom: 20px;
+}
+
+#mailinglist-subscription input.text, input[type="text"], input[type="email"] {
+  max-width: 60%;
+}
+
 @media (max-width: 640px) {
 
 #header #skip-to-content {
