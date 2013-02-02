@@ -1,10 +1,11 @@
-
+/*
 @font-face {
   font-family: 'Cinzel Decorative';
   font-style: normal;
   font-weight: 400;
   src: local('CinzelDecorative-Regular'), url(https://themes.googleusercontent.com/static/fonts/cinzeldecorative/v1/fmgK7oaJJIXAkhd9798yQt0Zu-Kfjb9GTaHd117aS3o.woff) format('woff');
 }
+*/
 
 /*
  * HTML5 Boilerplate
@@ -578,17 +579,23 @@ h2 {
   margin-bottom: 8px;
 }
 
-#body_content, #side_body_content {
-  background: #fff;
-  color: #333;
-  padding: 20px;
-  border-radius: .4em;
-}
-
 #page_container {
   margin: 10px auto;
   text-align: left;
+  position: relative;
   padding: 0px 10px;
+}
+
+#page {
+  position: relative;
+  background: #fff;
+  color: #333;
+  border-radius: .4em;
+  padding: 20px 0px;
+}
+
+#body_content, #side_body_content {
+  padding: 0px 20px;
 }
 
 
@@ -647,22 +654,6 @@ div.inquiries {
   background: #C6EB7B;
 }
 
-.addthis_floating_style {
-  top: 70px; right: 20px;
-}
-
-@media (max-width: 960px) {
-  body .addthis_floating_style{position:relative; top: 0px; right: 0px;}
-  body .addthis_floating_style.addthis_counter_style,
-  body .addthis_floating_style.addthis_counter_style .addthis_internal_container {
-      width: 100%;
-  }
-  body .addthis_floating_style .addthis_internal_container a {
-    max-width: 90px; float: left;
-  }
-}
-
-
 @media (max-width: 640px) {
 
 #header #skip-to-content {
@@ -683,7 +674,6 @@ div.inquiries {
 #menu li a {
   width: 100%;
 }
-
 
 #menu ul ul {
   display: block;
@@ -724,6 +714,4 @@ div.inquiries {
   #menu li:hover ul {
     display: block;
   }
-
-
 }

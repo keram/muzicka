@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<%= render "/refinery/html_tag" %>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+  <%= render "/refinery/head" %>
+  <body id="<%= canonical_id @page %>">
+    <%= site_bar -%>
+    <div id="page_container">
+      <header id="header">
+        <%= render "/refinery/header" -%>
+      </header>
+      <section id="page">
+        <%
+        addthis_attributes = ''
+        if @page.present?
+           ['url', 'title', 'description'].each do |p|
+            addthis_attributes += %Q(addthis:#{p}="#{h(@page["addthis_#{p}".to_sym])}" ) if @page["addthis_#{p}".to_sym].present?
+          end
+        end
+        %>
+        <div class="addthis_toolbox addthis_default_style " style="position: absolute; right: 12px; top: 20px" <%= addthis_attributes.html_safe %>>
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+        </div>
+        <%= yield %>
+        <div class="addthis_toolbox addthis_default_style " style="padding: 5px 20px;"  <%= addthis_attributes.html_safe %>>
+            <a class="addthis_button_facebook_like" fb:like:layout="box_count"></a>
+            <a class="addthis_button_tweet" tw:count="vertical"></a>
+            <a class="addthis_button_google_plusone" g:plusone:size="tall"></a>
+            <a class="addthis_counter"></a>
+        </div>
+      </section>
+      <footer>
+        <%= render "/refinery/footer" -%>
+      </footer>
+    </div>
+    <%= render "/refinery/javascripts" %>
+    <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4e04bc515401b2aa"></script>
+  </body>
+</html>

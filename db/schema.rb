@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130129005919) do
+ActiveRecord::Schema.define(:version => 20130202043846) do
 
   create_table "refinery_blog_categories", :force => true do |t|
     t.string   "title"
@@ -201,6 +201,9 @@ ActiveRecord::Schema.define(:version => 20130129005919) do
     t.string   "layout_template"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "addthis_url"
+    t.string   "addthis_title"
+    t.string   "addthis_description"
   end
 
   add_index "refinery_pages", ["depth"], :name => "index_refinery_pages_on_depth"
