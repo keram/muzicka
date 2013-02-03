@@ -8,22 +8,26 @@
       <header id="header">
         <%= render "/refinery/header" -%>
       </header>
-      <section id="page">
-        <%
-        addthis_attributes = ''
-        if @page.present?
-           ['url', 'title', 'description'].each do |p|
-            addthis_attributes += %Q(addthis:#{p}="#{h(@page["addthis_#{p}".to_sym])}" ) if @page["addthis_#{p}".to_sym].present?
-          end
-        end
-        %>
-        <div class="addthis_toolbox addthis_default_style " style="position: absolute; right: 12px; top: 20px" <%= addthis_attributes.html_safe %>>
+<%
+  addthis_attributes = ''
+  if @page.present?
+     ['url', 'title', 'description'].each do |p|
+      addthis_attributes += %Q(addthis:#{p}="#{h(@page["addthis_#{p}".to_sym])}" ) if @page["addthis_#{p}".to_sym].present?
+    end
+  end
+%>
+      <!-- AddThis Button BEGIN -->
+      <div class="clearfix">
+        <div class="addthis_toolbox addthis_default_style " style="height: 24px; float: right;">
           <a class="addthis_button_preferred_1"></a>
           <a class="addthis_button_preferred_2"></a>
           <a class="addthis_button_preferred_3"></a>
           <a class="addthis_button_preferred_4"></a>
           <a class="addthis_button_compact"></a>
+          <a class="addthis_counter addthis_bubble_style"></a>
         </div>
+      </div>
+      <section id="page">
         <%= yield %>
         <div class="addthis_toolbox addthis_default_style " style="padding: 5px 20px;" <%= addthis_attributes.html_safe %>>
             <a class="addthis_button_facebook_like" fb:like:layout="box_count" fb:like:width="92"  style="width: 92px;"></a>
