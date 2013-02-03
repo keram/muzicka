@@ -7,6 +7,7 @@ require "action_mailer/railtie"
 require "active_resource/railtie"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
+require 'rack/rewrite'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -65,8 +66,51 @@ module Muzicka
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-      config.action_view.sanitized_allowed_tags = %w( iframe )
-      config.action_view.sanitized_allowed_attributes = %w( src width height frameborder scrolling)
+    config.action_view.sanitized_allowed_tags = %w( iframe )
+    config.action_view.sanitized_allowed_attributes = %w( src width height frameborder scrolling)
 
+
+    config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
+      r301 '/buxus/generate_page.php?page_id=1', '/'
+      r301 '/buxus/generate_page.php?page_id=1&lng=sk', '/'
+      r301 '/buxus/generate_page.php?page_id=96', '/o-muzicke'
+      r301 '/buxus/generate_page.php?page_id=96&lng=sk', '/o-muzicke'
+      r301 '/buxus/generate_page.php?page_id=95&lng=sk', '/kontakt'
+      r301 '/buxus/generate_page.php?page_id=95', '/kontakt'
+      r301 '/buxus/generate_page.php?page_id=438&lng=sk', '/'
+      r301 '/buxus/generate_page.php?page_id=438', '/'
+      r301 '/buxus/generate_page.php?page_id=94&lng=sk', '/nahravky/'
+      r301 '/buxus/generate_page.php?page_id=94', '/nahravky/'
+      r301 '/buxus/generate_page.php?page_id=838&lng=sk', '/nahravky/'
+      r301 '/buxus/generate_page.php?page_id=838', '/nahravky/'
+      r301 '/buxus/generate_page.php?page_id=93&lng=sk', '/'
+      r301 '/buxus/generate_page.php?page_id=93', '/'
+      r301 '/buxus/generate_page.php?page_id=92&lng=sk', '/blog'
+      r301 '/buxus/generate_page.php?page_id=92', '/blog'
+      r301 '/buxus/generate_page.php?page_id=122&lng=sk', '/'
+      r301 '/buxus/generate_page.php?page_id=122', '/'
+      r301 '/buxus/generate_page.php?page_id=931&lng=sk', '/nahravky/spevaci-z-rejdovej-a-muzicka-2012'
+      r301 '/buxus/generate_page.php?page_id=931', '/nahravky/spevaci-z-rejdovej-a-muzicka-2012'
+      r301 '/buxus/generate_page.php?page_id=914&lng=sk', '/nahravky/pomo-auta-bo-anta-neto-kja'
+      r301 '/buxus/generate_page.php?page_id=914', '/nahravky/pomo-auta-bo-anta-neto-kja'
+      r301 '/buxus/generate_page.php?page_id=511&lng=sk', '/nahravky/cd-muzicka-2-2005'
+      r301 '/buxus/generate_page.php?page_id=511', '/nahravky/cd-muzicka-2-2005'
+      r301 '/buxus/generate_page.php?page_id=88&lng=sk', '/'
+      r301 '/buxus/generate_page.php?page_id=88', '/'
+      r301 '/buxus/generate_page.php?page_id=1&lng=sk', '/en/'
+      r301 '/buxus/generate_page.php?page_id=96&lng=sk', '/en/about-muzicka'
+      r301 '/buxus/generate_page.php?page_id=95&lng=sk', '/en/contact-address'
+      r301 '/buxus/generate_page.php?page_id=438&lng=sk', '/en/'
+      r301 '/buxus/generate_page.php?page_id=94&lng=sk', '/en/recordings/'
+      r301 '/buxus/generate_page.php?page_id=838&lng=sk', '/en/recordings/'
+      r301 '/buxus/generate_page.php?page_id=93&lng=sk', '/en/'
+      r301 '/buxus/generate_page.php?page_id=92&lng=sk', '/en/blog'
+      r301 '/buxus/generate_page.php?page_id=122&lng=sk', '/en/'
+      r301 '/buxus/generate_page.php?page_id=931&lng=sk', '/en/recordings/singers-from-rejdova-village-and-muzicka-2012'
+      r301 '/buxus/generate_page.php?page_id=914&lng=sk', '/en/recordings/pomo-auta-bo-anta-neto-kja-2011'
+      r301 '/buxus/generate_page.php?page_id=511&lng=sk', '/en/recordings/cd-muzicka-2-2005'
+      r301 '/buxus/generate_page.php?page_id=88&lng=sk', '/en/'
+      r301 %r{/buxus\S+},  '/'
+    end
   end
 end
