@@ -643,9 +643,9 @@ div.inquiries {
   max-width: 60%;
 }
 
-.blog-post, #blog_post {
+.blog-post, #blog_post, .blog_post {
   clear: both;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 header .details .blog_author {
