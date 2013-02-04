@@ -643,6 +643,27 @@ div.inquiries {
   max-width: 60%;
 }
 
+.blog-post, #blog_post {
+  clear: both;
+  margin-bottom: 10px;
+}
+
+header .details .blog_author {
+  display: none;
+}
+
+#next_prev_article {
+  clear: both;
+}
+
+#page li {
+  margin-bottom: 10px;
+}
+
+#page ul {
+  margin-bottom: 20px;
+}
+
 .flash {
   padding: 10px;
   background: #A3A6CF;
