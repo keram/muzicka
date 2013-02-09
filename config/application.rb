@@ -71,6 +71,7 @@ module Muzicka
 
 
     config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
+      r301 '/sk/cd-pomo-auta', '/nahravky/pomo-auta-bo-anta-neto-kja'
       r301 '/buxus/generate_page.php?page_id=1', '/'
       r301 '/buxus/generate_page.php?page_id=1&lng=sk', '/'
       r301 '/buxus/generate_page.php?page_id=96', '/o-muzicke'
