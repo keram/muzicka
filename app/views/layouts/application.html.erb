@@ -3,6 +3,7 @@
   <% site_bar = render('/refinery/site_bar', :head => true) -%>
   <%= render "/refinery/head" %>
   <body id="<%= canonical_id @page %>">
+    <%= render "/refinery/google_tag_manager" -%>
     <%= site_bar -%>
     <div id="page_container">
       <header id="header">
@@ -18,7 +19,7 @@
 %>
       <!-- AddThis Button BEGIN -->
       <div class="clearfix">
-        <div class="addthis_toolbox addthis_default_style " style="height: 24px; float: right; width: 160px;" <%= addthis_attributes.html_safe %>>
+        <div class="addthis_toolbox addthis_default_style " style="height: 24px; float: right; width: 157px;" <%= addthis_attributes.html_safe %>>
           <a class="addthis_button_preferred_1"></a>
           <a class="addthis_button_preferred_2"></a>
           <a class="addthis_button_preferred_3"></a>
@@ -36,7 +37,7 @@
             <a class="addthis_counter"></a>
         </div>
       </section>
-      <footer>
+      <footer id="footer">
         <%= render "/refinery/footer" -%>
       </footer>
     </div>

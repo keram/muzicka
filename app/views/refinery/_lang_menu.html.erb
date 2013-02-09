@@ -1,5 +1,5 @@
 <nav id='<%= dom_id %>' class='<%= css %>'>
-<% if 	 ! request.url.include? "/blog/" %>
+<% if !request.url.include? '/blog/' %>
 	<% Refinery::I18n.config.frontend_locales.each do |locale| %>
 		<% if Refinery::I18n.current_frontend_locale != locale  %>
 			<%= link_to refinery.url_for(params.merge(locale: locale)), {:title => Refinery::I18n.locales[locale]} do%>

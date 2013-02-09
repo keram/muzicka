@@ -7,10 +7,12 @@
   background: #eee;
   text-decoration: none;
   display: inline-block;
-  font-size: 1.17em;
+  /* font-size: 1.235em; */
+  font-size: 14px;
   opacity: 0.9;
   padding: 0px 18px;
-  font-family: 'Cinzel Decorative', cursive, sans-serif;
+  text-transform: uppercase;
+  font-family: Oldenburg, cursive, sans-serif;
 }
 
 #menu {
