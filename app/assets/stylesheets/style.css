@@ -580,7 +580,35 @@ h2 {
   margin-bottom: 8px;
 }
 
+#menu ul ul .first a {
+  border-radius: 0px;
+}
+
+#menu .first a {
+  border-radius: 5px 0px 0px 5px;
+}
+
+#menu ul ul {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 49px;
+  left: 0px;
+}
+
+#menu ul ul a {
+  height: 40px;
+  line-height: 40px;
+  font-size: 93%;
+}
+
+#menu li:hover ul {
+  display: block;
+}
+
 #page_container {
+  _width: 750px;
+  max-width: 750px;
   margin: 10px auto;
   text-align: left;
   position: relative;
@@ -702,7 +730,7 @@ header .details .blog_author {
 
 #menu ul ul {
   display: block;
-  position: normal;
+  position: relative !important;
   top: 0px;
   overflow: hidden;
 }
@@ -712,31 +740,4 @@ header .details .blog_author {
   width: 600px;
 }
 
-}
-
-@media only screen and (min-width: 780px) {
-
-  #page_container {
-    width: 750px;
-  }
-
-  #menu ul ul .first a {
-    border-radius: 0px;
-  }
-
-  #menu .first a {
-    border-radius: 5px 0px 0px 5px;
-  }
-
- #menu ul ul {
-    display: none;
-    position: absolute;
-    z-index: 10;
-    top: 50px;
-    left: 0px;
-  }
-
-  #menu li:hover ul {
-    display: block;
-  }
 }
